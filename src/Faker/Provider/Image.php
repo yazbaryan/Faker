@@ -30,7 +30,8 @@ class Image extends Base
     public static function imageUrl($width = 640, $height = 480, $category = 'any', $randomize = true, $word = null, $gray = false)
     {
         $baseUrl = "https://picsum.photos/";
-        $url = "{$width}/{$height}/?random";
+        $rand = rand(0,100);
+        $url = "{$width}/{$height}/?image={$rand}";
 
         return $baseUrl . $url;
     }
